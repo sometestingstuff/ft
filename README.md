@@ -47,7 +47,7 @@ There are reasons for this including scalability, security, API versioning, stan
 ## Dependencies
 
 Other than the dependencies that were required for the Webstorm template, 
-I used JEST as my test framework and Supertest for endpoint testing. The library below -- which is the main focus is below. 
+I used JEST as my test framework and Supertest for endpoint testing. The other dependency is the library below -- which is the main focus. 
  
 ## About the library
 
