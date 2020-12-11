@@ -47,7 +47,7 @@ There are reasons for this including scalability, security, API versioning, stan
 ## Dependencies
 
 Other than the dependencies that were required for the Webstorm template, 
-I used Axios as the library of choice for XHR, JEST as my test framework and Supertest for endpoint testing. 
+I used JEST as my test framework and Supertest for endpoint testing. The library below -- which is the main focus is below. 
  
 ## About the library
 
