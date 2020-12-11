@@ -1,6 +1,6 @@
 module.exports = () => {
 
-	const requestMultipleUrls = require('../utils/request-multiple-urls') ();
+	const requestMultipleUrls = require('jy-ft-request-multiple-urls') ();
 
 	/**
 	 * Query Service

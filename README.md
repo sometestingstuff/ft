@@ -9,7 +9,7 @@ Write a JavaScript package that is able to:
 # Installation
 
 ```bash
-git clone 
+git clone git@github.com:sometestingstuff/ft.git
 npm install
 ```
 ## Run
@@ -51,16 +51,23 @@ I used Axios as the library of choice for XHR, JEST as my test framework and Sup
  
 ## About the library
 
-The library is written as a simple utility class (and called from the service layer). I used the same name as the instructions for clarity.
+The library ('jy-ft-request-multiple-urls') is written (and published) as a simple NPM module (and called from the service layer). 
+I (basically) used the same name as the instructions for clarity.
 
+The library is a separate repo and can be found [HERE](https://github.com/sometestingstuff/jy-ft-request-multiple-urls)
+
+I decided to just publish a simple module since the instructions seemed to imply a NPM module 
+
+```javascript
+require('request-multiple-urls');
 ```
-const requestMultipleUrls = require('../utils/request-multiple-urls') ();
-```
+
+### Using the library
 
 It is invoked in the service layer like this:
 
 ```JavaScript
-const requestMultipleUrls = require('../utils/request-multiple-urls') ();
+const requestMultipleUrls = require('request-multiple-urls') ();
 . . . .
 getFromUrls: ( urls ) => {
 	return requestMultipleUrls.get( urls );

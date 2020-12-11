@@ -5,14 +5,14 @@ const request = require('supertest');
 const app = require('../../../app') ();
 
 describe('Test Get Multiple URLs', () => {
-	it('Default query.  Status code must be 200', () => {
+	it('Default query. Status code must be 200', () => {
 		return request(app).get('/')
 			.then((response) => {
 				expect(response.statusCode).toBe(200);
 			});
 	});
 
-	it('Default query. Return length should be 3`', () => {
+	it('Default query. Return length should be 3', () => {
 		return request(app).get('/')
 			.then((response) => {
 				expect(response.body.length).toBe(3);
@@ -30,6 +30,13 @@ describe('Test Get Multiple URLs', () => {
 		return request(app).get('/?urls=xyz.com')
 			.then((response) => {
 				expect(response.statusCode).toBe(404);
+			});
+	});
+
+	it('Default query. Object must have a data attribute', () => {
+		return request(app).get('/')
+			.then((response) => {
+				expect(response.body[ 0 ]).toHaveProperty('data'); // true
 			});
 	});
 });
