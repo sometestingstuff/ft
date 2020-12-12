@@ -1,6 +1,9 @@
 module.exports = () => {
 
-	const requestMultipleUrls = require('jy-ft-request-multiple-urls') ();
+	/**
+	 * Library to get multiple URLs
+	 */
+	const requestMultipleUrls = require('jy-ft-request-multiple-urls');
 
 	/**
 	 * Query Service
@@ -12,6 +15,5 @@ module.exports = () => {
 			return requestMultipleUrls.get( urls );
 		}
 	}
-
 	return QueryService;
 }

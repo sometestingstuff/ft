@@ -67,7 +67,7 @@ require('request-multiple-urls');
 It is invoked in the service layer like this:
 
 ```JavaScript
-const requestMultipleUrls = require('request-multiple-urls') ();
+const requestMultipleUrls = require('request-multiple-urls');
 . . . .
 getFromUrls: ( urls ) => {
 	return requestMultipleUrls.get( urls );

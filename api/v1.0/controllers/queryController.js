@@ -32,20 +32,19 @@ module.exports = ( ) => {
 				'https://ft-tech-test-example.s3-eu-west-1.amazonaws.com/gbp-hkd.json',
 				'https://ft-tech-test-example.s3-eu-west-1.amazonaws.com/gbp-usd.json'
 			];
-			let reqUrls = defaultUrls;
 
+			let reqUrls = defaultUrls;
 
 			try {
 				if ( req.query.urls ) {
 					reqUrls = req.query.urls.split(',');
 				}
-				const response = await QueryService ().getFromUrls ( reqUrls );
-				res.status ( 200 ).json ( response );
+				const responses = await QueryService ().getFromUrls ( reqUrls );
+				await res.status ( 200 ).json ( responses );
 			} catch (err)  {
 				QueryController._handleError( err );
 				res.status ( err.status ).send ( err );
 			};
-
 		}
 	};
 
